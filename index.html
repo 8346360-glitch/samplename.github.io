@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Cafe | La Ronge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background-color: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    /* Buttons */
+    .action-buttons {
+      margin: 15px 0 20px;
+    }
+
+    .call-button {
+      display: inline-block;
+      background-color: #6f4e37;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .call-button:hover {
+      background-color: #5a3f2c;
+    }
+
+    /* Menu grid */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .menu-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin: 12px 0 5px;
+    }
+
+    .menu-item p {
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Mobile bottom fixed buttons */
+    @media (max-width: 768px) {
+      .mobile-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+
+      .mobile-bar a {
+        flex: 1;
+        margin: 0 8px;
+        text-align: center;
+      }
+
+      body {
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>☕ Simple Cafe</h1>
+  <p>Dine-In & Take-Out • Fresh Coffee • Cozy Space</p>
+
+  <div class="action-buttons">
+    <a class="call-button" href="tel:2368583681">📞 Call Now</a>
+    <a class="call-button"
+       href="https://www.google.com/maps/dir/?api=1&destination=1639+La+Ronge+Ave,+La+Ronge"
+       target="_blank">🧭 Get Directions</a>
+  </div>
+</header>
+
+<section>
+  <h2>📍 Location</h2>
+  <p>1639 La Ronge Ave, La Ronge, Saskatchewan</p>
+
+  <iframe
+    src="https://www.google.com/maps?q=1639%20La%20Ronge%20Ave%2C%20La%20Ronge&output=embed"
+    loading="lazy">
+  </iframe>
+</section>
+
+<section>
+  <h2>🕒 Opening Hours</h2>
+  <p>
+    Monday – Friday: 7:00 AM – 6:00 PM<br>
+    Saturday – Sunday: 8:00 AM – 6:00 PM
+  </p>
+</section>
+
+<section>
+  <h2>📖 Our Menu</h2>
+
+  <div class="menu">
+    <div class="menu-item">
+      <img src="images/espresso.jpg" alt="Espresso">
+      <h3>Espresso</h3>
+      <p>Rich & bold</p>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/latte.jpg" alt="Latte">
+      <h3>Latte</h3>
+      <p>Smooth & creamy</p>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/cappuccino.jpg" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+      <p>Classic foam</p>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/pastry.jpg" alt="Pastry">
+      <h3>Fresh Pastries</h3>
+      <p>Baked daily</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🥡 Service</h2>
+  <p>Dine-In and Take-Out available</p>
+</section>
+
+<footer>
+  © 2025 Simple Cafe • La Ronge
+</footer>
+
+<!-- Mobile Fixed Bar -->
+<div class="mobile-bar">
+  <a class="call-button" href="tel:2368583681">📞 Call</a>
+  <a class="call-button"
+     href="https://www.google.com/maps/dir/?api=1&destination=1639+La+Ronge+Ave,+La+Ronge"
+     target="_blank">🧭 Directions</a>
+</div>
+
+</body>
+</html>
