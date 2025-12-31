@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const images = document.querySelectorAll('.lightbox-img');
+    const thumbnails = document.querySelectorAll('.lightbox-img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    images.forEach(img => {
+    thumbnails.forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.dataset.large || img.src;
             lightbox.style.display = 'flex';

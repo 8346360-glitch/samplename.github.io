@@ -20,15 +20,22 @@
     <h2>☕ Coffee</h2>
 
     <div class="menu-grid">
+        <!-- 小图（可以有很多个） -->
         <div class="menu-item">
-            <img src="https://8346360-glitch.github.io/samplename.github.io/images/Americano.jpg" alt="Americano" height="180px" data-large="https://8346360-glitch.github.io/samplename.github.io/images/Americano_big.jpg"   class="lightbox-img">
+            <img src="images/Americano.jpg"
+                class="lightbox-img"
+                data-large="images/Americano_big.jpg"
+                alt="Americano">
             <h3>Americano</h3>
-            <p>Freshly brewed espresso with hot water</p>
-            <span>$3.50</span>
+        </div>
+        <!-- Lightbox（页面中只能有一个） -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" class="lightbox-content">
         </div>
 
         <div class="menu-item">
-            <img src="https://8346360-glitch.github.io/samplename.github.io/images/latte_s.jpg" alt="Latte" height="180px">
+            <img src="https://8346360-glitch.github.io/samplename.github.io/images/latte.jpg" alt="Latte" data-large="https://8346360-glitch.github.io/samplename.github.io/images/Latte_big.jpg" height="180px" class="lightbox-img">
             <h3>Latte</h3>
             <p>Espresso with steamed milk</p>
             <span>$4.50</span>
@@ -71,9 +78,6 @@
         lightbox.style.display = 'flex';
     });
 </script>
-<div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" class="lightbox-content" alt="">
-</div>
+
 </body>
 </html>
