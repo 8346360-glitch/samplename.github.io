@@ -5,9 +5,9 @@
     <title>Menu | Simple Cafe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
 <header class="header">
     <h1>Simple Cafe</h1>
     <nav>
@@ -21,7 +21,7 @@
 
     <div class="menu-grid">
         <div class="menu-item">
-            <img src="https://8346360-glitch.github.io/samplename.github.io/images/Americano.jpg" alt="Americano" height="180px">
+            <img src="https://8346360-glitch.github.io/samplename.github.io/images/Americano.jpg" alt="Americano" height="180px" data-large="https://8346360-glitch.github.io/samplename.github.io/images/Americano_big.jpg"   class="lightbox-img">
             <h3>Americano</h3>
             <p>Freshly brewed espresso with hot water</p>
             <span>$3.50</span>
@@ -65,6 +65,15 @@
 <footer class="footer">
     <p>© Simple Cafe · 1639 La Ronge Ave, La Ronge</p>
 </footer>
-
+<script>
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.dataset.large || img.src;
+        lightbox.style.display = 'flex';
+    });
+</script>
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="">
+</div>
 </body>
 </html>
